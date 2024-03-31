@@ -47,8 +47,8 @@ async function getById(boardId) {
     board.members = users.map((user) => ({
         _id: user._id,
         fullname: user.fullname,
-        // imgUrl: user.imgUrl
-        imgUrl: `public/img/${user.fullname}.jpg` || `public/img/defult-person.svg`
+        imgUrl: user.imgUrl
+        // imgUrl: `public/img/${user.fullname}.jpg` || `public/img/Defult-Person.svg`
     }))
 
     return board;
