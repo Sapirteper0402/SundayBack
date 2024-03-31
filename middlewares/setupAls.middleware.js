@@ -11,11 +11,12 @@ export async function setupAsyncLocalStorage(req, res, next) {
 
         if (!req.cookies) return next()
         const loggedinUser = authService.validateToken(req.cookies.loginToken)
-
+        console.log(loggedinUser)
         if (loggedinUser) {
             const alsStore = asyncLocalStorage.getStore()
             alsStore.loggedinUser = loggedinUser
         }
+        console.log('after if',loggedinUser)
         next()
     })
 }
