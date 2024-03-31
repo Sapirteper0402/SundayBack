@@ -5,7 +5,7 @@ import { requireAuth } from '../../middlewares/requireAuth.middleware.js'
 
 const router = express.Router()
 
-router.get('/', log, getBoards)
+router.get('/', getBoards)
 router.get('/:boardId', getBoardById)
 router.delete('/:boardId', log, requireAuth, removeBoard)
 router.post('/', requireAuth, addBoard)
