@@ -5,6 +5,9 @@ import { ObjectId } from "mongodb";
 import { asyncLocalStorage } from "../../services/als.service.js";
 import { userService } from "../user/user.service.js";
 
+// import mongodb from 'mongodb'
+// const { ObjectId } = mongodb
+
 export const boardService = {
   query,
   getById,
@@ -43,13 +46,13 @@ async function getById(boardId) {
 
     if (!board) throw `Couldn't find board with _id ${boardId}`;
     
-    const users = await userService.query();
-    board.members = users.map((user) => ({
-        _id: user._id,
-        fullname: user.fullname,
-        imgUrl: user.imgUrl
-        // imgUrl: `public/img/${user.fullname}.jpg` || `public/img/Defult-Person.svg`
-    }))
+    // const users = await userService.query();
+    // board.members = users.map((user) => ({
+    //     _id: user._id,
+    //     fullname: user.fullname,
+    //     imgUrl: user.imgUrl
+    //     // imgUrl: `public/img/${user.fullname}.jpg` || `public/img/Defult-Person.svg`
+    // }))
 
     return board;
   } catch (err) {
@@ -175,7 +178,7 @@ function _getEmptyBoard() {
         },
         {
           _id: "u103",
-          fullname: "Oren Melamed",
+          fullname: "Adi Marom",
           imgUrl: "",
         },
       ],
