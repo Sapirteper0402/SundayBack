@@ -3,7 +3,7 @@
 Welcome to **Sunday**, a smart task manager designed to optimize and improve teamwork. <br/>
 With **Sunday**, you can effortlessly coordinate and manage your tasks, enhancing productivity and collaboration within your organization.
 
-Live Demo: https://sundayback.onrender.com/
+Live Demo: https://sunday-eg8k.onrender.com
 <br/>
 Frontend Repository: https://github.com/Sapirteper0402/SundayFront
 
